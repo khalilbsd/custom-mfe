@@ -27,33 +27,8 @@ const config = merge({
         newRelicApplicationID: process.env.NEW_RELIC_APP_ID || 'fake_app',
       }),
     ],
-
-    // This is a custom devServer configuration to allow this dev server to hit
-    // staging for various URLs.
-    devServer: {
-      proxy: {
-        '/proxy/ecommerce': {
-          target: 'https://ecommerce.stage.edx.org',
-          secure: false,
-          pathRewrite: { '^/proxy/ecommerce': '' },
-          changeOrigin: true,
-        },
-        '/proxy/lms': {
-          target: 'https://courses.stage.edx.org',
-          secure: false,
-          pathRewrite: { '^/proxy/lms': '' },
-          changeOrigin: true,
-        },
-        '/proxy/credentials': {
-          target: 'https://credentials.stage.edx.org',
-          secure: false,
-          pathRewrite: { '^/proxy/credentials': '' },
-          changeOrigin: true,
-        },
-      },
-    },
   },
-  getBaseConfig('webpack-dev-stage'),
+  getBaseConfig('webpack-dev'),
 );
 
 module.exports = config;
