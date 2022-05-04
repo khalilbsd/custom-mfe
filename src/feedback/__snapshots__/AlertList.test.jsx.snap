@@ -1,0 +1,171 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AlertList should be null by default 1`] = `null`;
+
+exports[`AlertList should render messages of each type 1`] = `
+Array [
+  <div
+    className="alert fade alert-dismissible alert-warning show"
+    hidden={false}
+    role="alert"
+  >
+    <button
+      aria-label="Close"
+      className="btn close"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+      >
+        ×
+      </span>
+    </button>
+    <div
+      className="alert-dialog"
+    >
+      Boo indeed!
+    </div>
+  </div>,
+  <div
+    className="alert fade alert-dismissible alert-info show"
+    hidden={false}
+    role="alert"
+  >
+    <button
+      aria-label="Close"
+      className="btn close"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+      >
+        ×
+      </span>
+    </button>
+    <div
+      className="alert-dialog"
+    >
+      Bah!
+    </div>
+  </div>,
+  <div
+    className="alert fade alert-dismissible alert-success show"
+    hidden={false}
+    role="alert"
+  >
+    <button
+      aria-label="Close"
+      className="btn close"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+      >
+        ×
+      </span>
+    </button>
+    <div
+      className="alert-dialog"
+    >
+      Meh!
+    </div>
+  </div>,
+  <div
+    className="alert fade alert-dismissible alert-danger show"
+    hidden={false}
+    role="alert"
+  >
+    <button
+      aria-label="Close"
+      className="btn close"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+      >
+        ×
+      </span>
+    </button>
+    <div
+      className="alert-dialog"
+    >
+      Gah!  An error!
+    </div>
+  </div>,
+  <div
+    className="alert fade alert-dismissible alert-warning show"
+    hidden={false}
+    role="alert"
+  >
+    <button
+      aria-label="Close"
+      className="btn close"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+      >
+        ×
+      </span>
+    </button>
+    <div
+      className="alert-dialog"
+    >
+      Debug debug
+    </div>
+  </div>,
+  <div
+    className="alert fade alert-dismissible alert-danger show"
+    hidden={false}
+    role="alert"
+  >
+    <button
+      aria-label="Close"
+      className="btn close"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+      >
+        ×
+      </span>
+    </button>
+    <div
+      className="alert-dialog"
+    >
+      <span>
+        There was an unexpected problem. If the problem persists, please 
+        <a
+          className="pgn__hyperlink default-link standalone-link"
+          href="http://localhost:18000/support"
+          onClick={[Function]}
+          target="_self"
+        >
+          <span>
+            contact support
+          </span>
+        </a>
+        .
+      </span>
+    </div>
+  </div>,
+]
+`;
