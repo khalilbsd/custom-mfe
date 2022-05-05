@@ -112,12 +112,12 @@ class Checkout extends React.Component {
           </h5>
 
           <p className="d-flex flex-wrap">
-            <button type="button" className="payment-method-button active">
+            {/* <button type="button" className="payment-method-button active">
               <img
                 src={AcceptedCardLogos}
                 alt={intl.formatMessage(messages['payment.page.method.type.credit'])}
               />
-            </button>
+            </button> */}
 
             <PayPalButton
               onClick={this.handleSubmitPayPal}
@@ -130,7 +130,7 @@ class Checkout extends React.Component {
           </p>
         </div>
 
-        <PaymentForm
+        {/* <PaymentForm
           onSubmitPayment={this.handleSubmitCybersource}
           onSubmitButtonClick={this.handleSubmitCybersourceButtonClick}
           disabled={submitting}
@@ -139,7 +139,7 @@ class Checkout extends React.Component {
           isProcessing={cybersourceIsSubmitting}
           isBulkOrder={isBulkOrder}
           isQuantityUpdating={isQuantityUpdating}
-        />
+        /> */}
       </>
     );
   }
