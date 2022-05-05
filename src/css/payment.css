@@ -1,0 +1,96 @@
+:root {
+  /* Colors: */
+  --unnamed-color-f6d738: #f6d738;
+  --unnamed-color-edbd31: #edbd31;
+  --unnamed-color-3e4b80: #3e4b80;
+  --unnamed-color-eaf0f4: #eaf0f4;
+  --unnamed-color-de1a47: #de1a47;
+  --unnamed-color-bdc7e8: #bdc7e8;
+  --unnamed-color-e5903b: #e5903b;
+  --unnamed-color-ffffff: #ffffff;
+  --unnamed-color-777777: #777777;
+  --unnamed-color-1c1c1c: #1c1c1c;
+  --unnamed-color-2ce4b4: #2ce4b4;
+  --unnamed-color-1a46de: #1a46de;
+}
+body {
+  background-color: var(--unnamed-color-eaf0f4) !important;
+  font-family: "Montserrat";
+}
+h5 {
+  font-family: "Montserrat";
+  /* color:var(--unnamed-color-1a46de) */
+}
+.page__payment {
+  padding: 5% 10% !important;
+}
+
+.col-basket-summary section {
+  background-color: white;
+  padding: 5% 5%;
+  border-radius: 5px;
+}
+
+.pl-md-5 {
+  padding-left: 5%;
+}
+
+input {
+  border: 1px solid var(--unnamed-color-bdc7e8);
+}
+
+input:hover,
+input:focus,
+input:active {
+  border: 1px solid var(--unnamed-color-2ce4b4) !important;
+  box-shadow: none !important;
+}
+
+header {
+  padding: 17px 5%;
+}
+
+a.nav-link {
+  color: var(--unnamed-color-777777);
+  font-family: "Montserrat";
+  transition: color 0.2s;
+}
+
+a.nav-link:hover {
+  background-color: unset !important;
+  color: var(--unnamed-color-1a46de) !important;
+}
+
+@media only screen and (min-width: 992px) {
+  nav {
+    width: 15%;
+    justify-content: flex-end;
+  }
+
+  .menu {
+    border: none !important;
+    outline: none;
+    width: 100%;
+  }
+  .menu-trigger {
+    border: none;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    width: 100%;
+    color: var(--unnamed-color-777777);
+  }
+
+  .menu-trigger:hover{
+    background: none;
+    color: unset;
+  }
+.menu-trigger svg:nth-child(2){
+    display: none;
+}
+  .menu-trigger .avatar {
+    color: var(--unnamed-color-1c1c1c);
+  }
+  .menu-content{
+      width: 100%;
+  }
+}
