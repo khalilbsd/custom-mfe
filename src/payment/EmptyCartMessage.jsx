@@ -20,20 +20,20 @@ const EmptyCartMessage = () => (
           description="The message displayed when there is no basket. Action links will redirect to dashboard or support page"
           values={{
             actionLinkOne: (
-              <Hyperlink destination={getConfig().LMS_BASE_URL}>
+              <Hyperlink destination={getConfig().LMS_BASE_URL+"/courses"}>
                 <FormattedMessage
                   id="payment.empty.basket.dashboardURL"
-                  defaultMessage="dashboard"
-                  description="The message displayed on the redirect to dashboard link"
+                  defaultMessage="courses"
+                  description="The message displayed on the redirect to courses link"
                 />
               </Hyperlink>
             ),
             actionLinkTwo: (
-              <Hyperlink destination={getConfig().SUPPORT_URL}>
+              <Hyperlink destination={getConfig().LMS_BASE_URL+"/contactus"}>
                 <FormattedMessage
                   id="payment.empty.basket.supportURL"
-                  defaultMessage="contact edX E-commerce Support"
-                  description="The message displayed on the redirect to support page link"
+                  defaultMessage="contact us"
+                  description="The message displayed on the redirect to contact us link"
                 />
               </Hyperlink>
             ),
