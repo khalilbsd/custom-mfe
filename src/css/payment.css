@@ -94,6 +94,6 @@ a.nav-link:hover {
     color: var(--unnamed-color-1c1c1c);
   }
   .menu-content{
-      width: 100%;
+      width: fit-content !important;
   }
 }
