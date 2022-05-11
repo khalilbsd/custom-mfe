@@ -1,4 +1,8 @@
 {
+  "header.user.menu.logout":"Se déconnecter",
+  "header.user.menu.account.settings":"Compte",
+  "header.user.menu.profile":"Profil",
+  "header.user.menu.dashboard":"Tableau de bord",
   "payment.error.fetch.basket": "Il y a eu un problème inattendu. Si le problème persiste, veuillez nous écrire à {supportLink}.",
   "payment.error.fetch.basket.support.fragment": "contacter le support",
   "payment.messages.enrollment-code-product-info.header": "Vous achetez juste pour vous ?",
