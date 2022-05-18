@@ -63,6 +63,7 @@ a.nav-link:hover {
   background-color: unset !important;
   color: var(--unnamed-color-1a46de) !important;
 }
+footer{height: 128px !important}
 
 @media only screen and (min-width: 992px) {
   nav {
