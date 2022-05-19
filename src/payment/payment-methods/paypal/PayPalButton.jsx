@@ -10,10 +10,11 @@ const PayPalButton = ({ intl, isProcessing, ...props }) => (
     {isProcessing ? (
       <span className="button-spinner-icon text-primary mr-2" />
     ) : null}
-    <img
+    {/* <img
       src={AcceptedCardLogos}
       alt={intl.formatMessage(messages["payment.page.method.type.credit"])}
-    />
+    /> */}
+    {intl.formatMessage(messages['payment.page.methond.type.name'])}
   </button>
 );
 
