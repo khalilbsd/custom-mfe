@@ -54,7 +54,7 @@
   "payment.update.quantity.label": "Quantité",
   "payment.update.quantity.field.help.text": "Maximum : {number}",
   "payment.update.quantity.submit.button": "Mettre à jour",
-  "payment.select.payment.method.heading": "Choisissez une méthode de paiement",
+  "payment.select.payment.method.heading": "Passer à l'étape de paiement",
   "payment.section.payment.details.label": "Détails de payement",
   "payment.page.method.type.credit": "Carte de crédit",
   "payment.page.methond.type.name":"Payer Maintenant",

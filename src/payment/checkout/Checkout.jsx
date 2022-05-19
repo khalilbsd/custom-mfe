@@ -106,7 +106,7 @@ class Checkout extends React.Component {
           <h5 aria-level="2">
             <FormattedMessage
               id="payment.select.payment.method.heading"
-              defaultMessage="Select Payment Method"
+              defaultMessage="Proceed to the payment"
               description="The heading for the payment type selection section"
             />
           </h5>
