@@ -14,25 +14,8 @@ import PaymentForm from './payment-form/PaymentForm';
 import FreeCheckoutOrderButton from './FreeCheckoutOrderButton';
 import { PayPalButton } from '../payment-methods/paypal';
 import { ORDER_TYPES } from '../data/constants';
-import CustomForm from './CustomForm';
+
 class Checkout extends React.Component {
-  constructor(props){
-    super(props);
-    this.state ={
-      'name':'',
-      'lastName':'',
-      'adress':'',
-      'tel':''
-    }
-  }
-  handleState=(e)=>{
-    this.setState({...this.state,[e.target.name]:e.target.value})
-    console.log(this.state)
-  }
-
-  
-  
-
   handleSubmitPayPal = () => {
     // TO DO: after event parity, track data should be
     // sent only if the payment is processed, not on click
@@ -135,15 +118,14 @@ class Checkout extends React.Component {
                 alt={intl.formatMessage(messages['payment.page.method.type.credit'])}
               />
             </button> */}
-            <form>
-              <CustomForm handleChange={this.handleState}/>
-           <PayPalButton
+
+            <PayPalButton
               onClick={this.handleSubmitPayPal}
               className={classNames('payment-method-button', { 'skeleton-pulse': loading })}
               disabled={submissionDisabled}
               isProcessing={payPalIsSubmitting}
-              /> 
-              </form>
+            />
+
             {/* Apple Pay temporarily disabled per REV-927  - https://github.com/edx/frontend-app-payment/pull/256 */}
           </p>
         </div>
