@@ -128,7 +128,7 @@ class Checkout extends React.Component {
             />
           </h5>
 
-          <p className="d-flex flex-wrap">
+          <div className="d-flex flex-wrap">
             {/* <button type="button" className="payment-method-button active">
               <img
                 src={AcceptedCardLogos}
@@ -139,7 +139,7 @@ class Checkout extends React.Component {
               <CustomForm intl={intl} handleChange={this.handleState}/>
               <div className='submit-btn'>
                   <PayPalButton
-                    onClick={this.handleSubmitPayPal}
+                    onSubmit={this.handleSubmitPayPal}
                     className={classNames('payment-method-button', { 'skeleton-pulse': loading })}
                     disabled={submissionDisabled}
                     isProcessing={payPalIsSubmitting}
@@ -147,7 +147,7 @@ class Checkout extends React.Component {
               </div>
               </form>
             {/* Apple Pay temporarily disabled per REV-927  - https://github.com/edx/frontend-app-payment/pull/256 */}
-          </p>
+          </div>
         </div>
 
         {/* <PaymentForm
