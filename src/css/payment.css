@@ -122,8 +122,10 @@ footer{height: 128px !important}
   margin-top: 25px;
   width: 70%;
   text-align: center !important;
-  display: unset !important;
+  display: flex !important;
+  justify-content: center;
 }
+
 
 /*custom text css*/
 
