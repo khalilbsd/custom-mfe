@@ -6,7 +6,7 @@ import PayPalLogo from "./assets/paypal-logo.png";
 import messages from "./PayPalButton.messages";
 
 const PayPalButton = ({ intl, isProcessing, ...props }) => (
-  <button type="button" {...props}>
+  <button type="submit" {...props}>
     {isProcessing ? (
       <span className="button-spinner-icon text-primary mr-2" />
     ) : null}
