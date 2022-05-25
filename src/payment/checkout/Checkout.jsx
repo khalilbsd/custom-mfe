@@ -27,13 +27,12 @@ class Checkout extends React.Component {
   }
   handleState=(e)=>{
     this.setState({...this.state,[e.target.name]:e.target.value})
-    console.log(this.state)
   }
 
   
   
 
-  handleSubmitPayPal = () => {
+  handleSubmitPayPal = (e) => {
     // TO DO: after event parity, track data should be
     // sent only if the payment is processed, not on click
     // Check for ApplePay and Free Basket as well
@@ -42,7 +41,8 @@ class Checkout extends React.Component {
       { type: 'click', category: 'checkout', paymentMethod: 'PayPal' },
     );
 
-    this.props.submitPayment({ method: 'paypal' });
+    e.preventDefault()
+    this.props.submitPayment({ method: 'paypal', ...this.state });
   }
 
   handleSubmitApplePay = () => {
