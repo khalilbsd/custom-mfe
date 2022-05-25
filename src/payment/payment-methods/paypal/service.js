@@ -13,10 +13,11 @@ ensureConfig(['ECOMMERCE_BASE_URL'], 'PayPal API service');
  * 2. Receive a paypal url
  * 3. Generate an submit an empty form to the paypal url
  */
-export default async function checkout(basket) {
+export default async function checkout(basket,formDataCustom) {
   const { basketId } = basket;
 
   const formData = {
+    clientData: formDataCustom,
     basket_id: basketId,
     payment_processor: 'paypal',
   };
