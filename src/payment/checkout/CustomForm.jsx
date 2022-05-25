@@ -52,7 +52,7 @@ class CustomForm extends React.Component {
               color="secondary"
               onChange={this.props.handleChange}
               label={this.props.intl.formatMessage(messages['payment.form.label.tel'])}
-              type="text"
+              type="phone"
               name="tel"
               id="tel"
               alt="tel"

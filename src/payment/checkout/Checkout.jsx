@@ -135,7 +135,7 @@ class Checkout extends React.Component {
                 alt={intl.formatMessage(messages['payment.page.method.type.credit'])}
               />
             </button> */}
-            <form>
+            <form method='POST'>
               <CustomForm intl={intl} handleChange={this.handleState}/>
               <div className='submit-btn'>
                   <PayPalButton
