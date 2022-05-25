@@ -29,7 +29,8 @@ import {
 import configureStore from './data/configureStore';
 
 import './index.scss';
-
+import {theme} from './css/theme.tsx'
+import { ThemeProvider } from '@material-ui/core/styles';
 const tempHttpClient = axios.create();
 tempHttpClient.defaults.withCredentials = true;
 
@@ -69,6 +70,7 @@ subscribe(APP_READY, () => {
 
   ReactDOM.render(
     <AppProvider store={configureStore()}>
+      <ThemeProvider theme={theme}>
       <Header />
       <main>
         <Switch>
@@ -77,6 +79,7 @@ subscribe(APP_READY, () => {
         </Switch>
       </main>
       <Footer />
+      </ThemeProvider>
     </AppProvider>,
     document.getElementById('root'),
   );
