@@ -1,4 +1,8 @@
 {
+  "payment.form.label.name":"Nom",
+  "payment.form.label.lastName":"Prénom",
+  "payment.form.label.addr":"Adresse",
+  "payment.form.label.tel":"Téléphone",
   "header.links.courses":"Cours",
   "header.user.menu.order.history":"Historique des commandes",
   "header.user.menu.logout":"Se déconnecter",

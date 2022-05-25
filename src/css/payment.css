@@ -35,16 +35,17 @@ h5 {
   padding-left: 5%;
 }
 
-input {
+/* input {
   border: 1px solid var(--unnamed-color-bdc7e8);
-}
+  outline: var(--unnamed-color-bdc7e8);
+} */
 
-input:hover,
+/* input:hover,
 input:focus,
 input:active {
   border: 1px solid var(--unnamed-color-2ce4b4) !important;
   box-shadow: none !important;
-}
+} */
 
 header {
   padding: 5px 5%;
@@ -97,4 +98,35 @@ footer{height: 128px !important}
   .menu-content {
     width: fit-content !important;
   }
+}
+
+.form-fields{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  column-gap: 25px;
+}
+
+.form-fields .left-fields,.right-fields{
+  display: flex;
+ gap: 10px;
+}
+
+.submit-btn{
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.payment-method-button{
+  margin-top: 25px;
+  width: 70%;
+  text-align: center !important;
+  display: unset !important;
+}
+
+/*custom text css*/
+
+.basket-section h5{
+  font-size: 18px;
 }

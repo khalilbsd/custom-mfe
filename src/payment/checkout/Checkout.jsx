@@ -136,13 +136,15 @@ class Checkout extends React.Component {
               />
             </button> */}
             <form>
-              <CustomForm handleChange={this.handleState}/>
-           <PayPalButton
-              onClick={this.handleSubmitPayPal}
-              className={classNames('payment-method-button', { 'skeleton-pulse': loading })}
-              disabled={submissionDisabled}
-              isProcessing={payPalIsSubmitting}
+              <CustomForm intl={intl} handleChange={this.handleState}/>
+              <div className='submit-btn'>
+                  <PayPalButton
+                    onClick={this.handleSubmitPayPal}
+                    className={classNames('payment-method-button', { 'skeleton-pulse': loading })}
+                    disabled={submissionDisabled}
+                    isProcessing={payPalIsSubmitting}
               /> 
+              </div>
               </form>
             {/* Apple Pay temporarily disabled per REV-927  - https://github.com/edx/frontend-app-payment/pull/256 */}
           </p>
