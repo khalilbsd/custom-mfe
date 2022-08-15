@@ -150,7 +150,7 @@ class Checkout extends React.Component {
           </div>
         </div>
 
-         <PaymentForm
+         {/* <PaymentForm
           onSubmitPayment={this.handleSubmitCybersource}
           onSubmitButtonClick={this.handleSubmitCybersourceButtonClick}
           disabled={submitting}
@@ -159,7 +159,7 @@ class Checkout extends React.Component {
           isProcessing={cybersourceIsSubmitting}
           isBulkOrder={isBulkOrder}
           isQuantityUpdating={isQuantityUpdating}
-        /> 
+        />  */}
       </>
     );
   }
