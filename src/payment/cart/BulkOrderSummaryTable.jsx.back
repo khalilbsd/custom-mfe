@@ -11,10 +11,10 @@ export default function BulkOrderSummaryTable({ price, quantity, subtotal }) {
         <thead>
           <tr>
             <th className="font-weight-normal">
-            <FormattedMessage
-                id="payment.bulk.summary.table.label.subtotal"
-                defaultMessage="Subtotal"
-                description="Label for subtotal on bulk order summary table"
+              <FormattedMessage
+                id="payment.bulk.summary.table.label.price"
+                defaultMessage="Price"
+                description="Label for price on bulk order summary table"
               />
             </th>
             <th className="font-weight-normal">
@@ -24,24 +24,24 @@ export default function BulkOrderSummaryTable({ price, quantity, subtotal }) {
                 description="Label for quantity on bulk order summary table"
               />
             </th>
-            {/* <th className="font-weight-normal text-right">
+            <th className="font-weight-normal text-right">
               <FormattedMessage
                 id="payment.bulk.summary.table.label.subtotal"
                 defaultMessage="Subtotal"
                 description="Label for subtotal on bulk order summary table"
               />
-            </th> */}
+            </th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>
-              <LocalizedPrice amount={subtotal} />
+              <LocalizedPrice amount={price} />
             </td>
             <td>{quantity}</td>
-            {/* <td className="text-right">
+            <td className="text-right">
               <LocalizedPrice amount={subtotal} />
-            </td> */}
+            </td>
           </tr>
         </tbody>
       </table>

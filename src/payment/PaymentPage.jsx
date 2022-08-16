@@ -171,7 +171,7 @@ PaymentPage.propTypes = {
 PaymentPage.defaultProps = {
   isEmpty: false,
   isRedirect: false,
-  summaryQuantity: undefined,
+  summaryQuantity: 1,
   summarySubtotal: undefined,
 };
 
