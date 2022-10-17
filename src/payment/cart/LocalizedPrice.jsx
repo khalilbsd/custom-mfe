@@ -1,8 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React,{useEffect,useState} from 'react';
+import axios from 'axios'
+import PropTypes, { symbol } from 'prop-types';
 import { connect } from 'react-redux';
 import { FormattedNumber } from '@edx/frontend-platform/i18n';
-
+import axios from "axios";
+import { currencies } from "./currencies.js";
 import { localizedCurrencySelector } from '../data/selectors';
 
 /**
@@ -13,11 +15,51 @@ import { localizedCurrencySelector } from '../data/selectors';
  * Since localized prices are an estimate anyway, they are always round numbers (0 decimal points).
  */
 function LocalizedPrice(props) {
+     //creating function to load ip address from the API
+     const [ip, setIP] = useState("");
+     const [country, setCountry] = useState();
+     const [symbol, setSymbol] = useState();
+     const [rate, setRate] = useState(0)
+
+     //creating function to load ip address from the API
+     const getData = async () => {
+       const res = await axios.get("https://geolocation-db.com/json/");
+         //creating IP state
+       setIP(res.data.IPv4);
+       setCountry(res.data.country_code);
+     };
+
+     const getSymbol =async () => {
+       currencies.map((curren) => {
+         if (Object.keys(curren)[0] === country) {
+          setSymbol(curren[Object.keys(curren)[0]])
+         }
+
+       })
+     };
+
+
+     const getRate =async()=>{
+       const res= await axios.get("https://api.currencyfreaks.com/latest?apikey=d6e3172654344d45bb959212b0fb26e4&symbols="+symbol)
+       setRate(Object.values(res.data.rates)[0])
+
+     }
+     useEffect(() => {
+       //passing getData method to the lifecycle method
+       getData();
+       setCountry(currencies.TN);
+       getSymbol();
+       if (symbol){
+         getRate();
+       }
+     }, [ip,symbol]);
+
+
   if (props.amount === undefined) {
     return null;
   }
 
-  const price = props.conversionRate * props.amount;
+  const price = rate * props.amount;
 
   if (props.showAsLocalizedCurrency) {
     return (
@@ -54,8 +96,8 @@ LocalizedPrice.propTypes = {
 
 LocalizedPrice.defaultProps = {
   amount: undefined,
-  conversionRate: 1,
-  currencyCode: 'USD',
+  conversionRate: rate,
+  currencyCode: symbol,
   showAsLocalizedCurrency: false,
 };
 
