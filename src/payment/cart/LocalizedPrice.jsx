@@ -1,10 +1,9 @@
 import React,{useEffect,useState} from 'react';
-import axios from 'axios'
 import PropTypes, { symbol } from 'prop-types';
 import { connect } from 'react-redux';
 import { FormattedNumber } from '@edx/frontend-platform/i18n';
-import axios from 'axios';
-import { currencies } from "./currencies.js";
+import {axios} from 'axios';
+import { currencies } from './currencies.js';
 import { localizedCurrencySelector } from '../data/selectors';
 
 /**
