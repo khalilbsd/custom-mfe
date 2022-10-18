@@ -43,14 +43,14 @@ function LocalizedPrice(props) {
   }
   useEffect(() => {
     //passing getData method to the lifecycle method
-    if (!ip || !country){
+    if (!symbol || !country){
       getData();
       getSymbol();
     }
     if (symbol){
       getRate();
     }
-  }, [ip,country]);
+  }, [ip,country,symbol]);
 
   if (props.amount === undefined) {
     return null;
