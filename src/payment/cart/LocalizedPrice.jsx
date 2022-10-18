@@ -56,7 +56,7 @@ function LocalizedPrice(props) {
     return null;
   }
 
-  const price = rate * props.amount;
+  const price = Math.round((rate * props.amount)+.5);
 
   if (props.showAsLocalizedCurrency) {
     return (
