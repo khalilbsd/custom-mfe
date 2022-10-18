@@ -53,7 +53,10 @@ function LocalizedPrice(props) {
   if (props.amount === undefined) {
     return null;
   }
-
+console.log(rate)
+console.log(symbol)
+console.log(country)
+console.log(ip)
   const price = rate * props.amount;
 
   if (props.showAsLocalizedCurrency) {
@@ -62,7 +65,7 @@ function LocalizedPrice(props) {
         <FormattedNumber
           value={price}
           style="currency" // eslint-disable-line react/style-prop-object
-          currency={props.currencyCode}
+          currency={symbol}
           maximumFractionDigits={0}
           minimumFractionDigits={0}
         /> *
