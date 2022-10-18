@@ -15,15 +15,15 @@ import { localizedCurrencySelector } from '../data/selectors';
  */
 function LocalizedPrice(props) {
     //creating IP state
-  const [ip, setIP] = useState("");
+  const [ip, setIP] = useState();
   const [country, setCountry] = useState();
   const [symbol, setSymbol] = useState();
   const [rate, setRate] = useState(0)
   //creating function to load ip address from the API
   const getData = async () => {
-    const res = await axios.get("https://geolocation-db.com/json/");
-    setIP(res.data.IPv4);
-    setCountry(res.data.country_code);
+    const res = await axios.get("https://geolocation-db.com/json/",{withCredentials: false,});
+    setIP(res?.data?.IPv4);
+    setCountry(res?.data?.country_code);
   };
 
   const getSymbol =async () => {
@@ -37,26 +37,25 @@ function LocalizedPrice(props) {
 
 
   const getRate =async()=>{
-    const res= await axios.get("https://api.currencyfreaks.com/latest?apikey=d6e3172654344d45bb959212b0fb26e4&symbols="+symbol)
+    const res= await axios.get("https://api.currencyfreaks.com/latest?apikey=d6e3172654344d45bb959212b0fb26e4&symbols="+symbol,{withCredentials: false,})
     setRate(Object.values(res.data.rates)[0])
 
   }
   useEffect(() => {
     //passing getData method to the lifecycle method
-    getData();
-    getSymbol();
+    if (!ip || !country){
+      getData();
+      getSymbol();
+    }
     if (symbol){
       getRate();
     }
-  }, [ip,symbol]);
+  }, [ip,country]);
 
   if (props.amount === undefined) {
     return null;
   }
-console.log(rate)
-console.log(symbol)
-console.log(country)
-console.log(ip)
+
   const price = rate * props.amount;
 
   if (props.showAsLocalizedCurrency) {
