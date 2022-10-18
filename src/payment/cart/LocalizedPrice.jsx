@@ -76,7 +76,7 @@ function LocalizedPrice(props) {
     <FormattedNumber
       value={price}
       style="currency" // eslint-disable-line react/style-prop-object
-      currency={props.currencyCode}
+      currency={symbol}
     />
   );
 }
